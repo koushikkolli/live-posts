@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Live Posts</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Live Posts</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" >Posts <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="add_post.html">Add Post <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        <div class="login-page" id="loginPageId">
+            <div class="form">
+              <form class="d-none" id="registerformId">
+                <h1 style="margin-bottom: 30px;color:  #007bff;"><b>Sign Up</b></h1>
+
+                <select name="Role" id="role" required>
+                  <option value="">--Select Role--</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select>
+                <input type="text" placeholder="email address" id="registerEmaiId" required>
+                <input type="password" placeholder="password" id="registerPasswordId" required>
+                <button type="submit">create</button>
+                <p class="message">Already registered? <a href="#" onclick="onAlreadyRegistered()">Sign In</a></p>
+              </form>
+              <form class="" id="loginFormId">
+                <h1 style="margin-bottom: 30px;color:  #007bff;"><b>Log In</b></h1>
+                <input type="text" placeholder="username" id="loginEmailId" required>
+                <input type="password" placeholder="password" id="loginPasswordId" required>
+                <p class="message" style="margin-top: 10px;">Forgot password? <a href="#" onclick="onResetPassword()">Reset password</a></p>
+                <button style="margin-top: 10px;" type="submit">login</button>
+                <p class="message">Not registered? <a href="#" onclick="onCreateAccount()">Create an account</a></p>
+              </form>
+              <form class="d-none" id="resetFormId">
+                <h3 style="margin-bottom: 30px;color:  #007bff;"><b>Password Reset</b></h3>
+                <input type="text" placeholder="username" id="resetEmailId" required>
+                <button style="margin-top: 10px;" type="submit">Reset</button>
+                <p class="message">Want to sign in? <a href="#" onclick="onSignIn()">Sign In</a></p>
+              </form>
+            </div>
+          </div>
+          <a class="d-none" href="index.html" id="shortenPageLinkId"></a>
+    </body>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    
+</html> 
